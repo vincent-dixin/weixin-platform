@@ -1,0 +1,69 @@
+
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title></title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="bootstrap/js/html5shiv.js"></script>
+      <script src="bootstrap/js/respond.min.js"></script>
+    <![endif]-->
+    
+      <script src="javascripts/jquery-1.10.2.min.js"></script>
+	  
+      <script src="javascripts/Chart.min.js"></script>
+      <script src="bootstrap/js/bootstrap.js"></script>
+      
+  </head>
+	<body style="padding-top: 80px">
+		<canvas id="canvas" height="360" width="360"></canvas>
+<nav class="navbar navbar-default navbar-fixed-top" style="background-color:rgb(66, 139, 202);" role="banner">
+	  <div class="navbar-header">
+	    <a class="navbar-brand" ><font color="white"> ERMIS-MOBILE (资产负债率) </font></a>
+	  </div>
+	</nav>
+
+	<script>
+	var chartData = [
+			{
+				value : Math.random(),
+				color: "#D97041"
+			},
+			{
+				value : Math.random(),
+				color: "#C7604C"
+			},
+			{
+				value : Math.random(),
+				color: "#21323D"
+			},
+			{
+				value : Math.random(),
+				color: "#9D9B7F"
+			},
+			{
+				value : Math.random(),
+				color: "#7D4F6D"
+			},
+			{
+				value : Math.random(),
+				color: "#584A5E"
+			}
+		];
+		
+	var c = $("#canvas")[0]
+	var myPolarArea = new Chart(c.getContext("2d")).PolarArea(chartData);
+	</script>
+	</body>
+</html>

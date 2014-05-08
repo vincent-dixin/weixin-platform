@@ -1,0 +1,61 @@
+
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title></title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="bootstrap/js/html5shiv.js"></script>
+      <script src="bootstrap/js/respond.min.js"></script>
+    <![endif]-->
+    
+      <script src="javascripts/jquery-1.10.2.min.js"></script>
+	  
+      <script src="javascripts/Chart.min.js"></script>
+      <script src="bootstrap/js/bootstrap.js"></script>
+      
+  </head>
+	<body style="padding-top: 80px">
+		<canvas id="canvas" height="475" width="360"></canvas>
+<nav class="navbar navbar-default navbar-fixed-top" style="background-color:rgb(66, 139, 202);" role="banner">
+	  <div class="navbar-header">
+	    <a class="navbar-brand" ><font color="white"> ERMIS-MOBILE (库存周转率) </font></a>
+	  </div>
+	</nav>
+
+	<script>
+
+		var barChartData = {
+			labels : ["1月","2月","3月","4月","5月","6月","7月"],
+			datasets : [
+				{
+					fillColor : "rgba(220,220,220,0.5)",
+					strokeColor : "rgba(220,220,220,1)",
+					data : [65,59,90,81,56,55,40]
+				},
+				{
+					fillColor : "rgba(151,187,205,0.5)",
+					strokeColor : "rgba(151,187,205,1)",
+					data : [28,48,40,19,96,27,100]
+				}
+			]
+			
+		}
+
+	var c = $("#canvas")[0]
+	var myLine = new Chart(c.getContext("2d")).Bar(barChartData);
+	
+	</script>
+	</body>
+</html>
